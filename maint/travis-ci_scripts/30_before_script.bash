@@ -59,7 +59,7 @@ if [[ "$CLEANTEST" = "true" ]]; then
   if [[ "$DEVREL_DEPS" != "true" ]] && ! CPAN_is_sane ; then
     # no configure_requires - we will need the usual suspects anyway
     # without pre-installing these in one pass things like extract_prereqs won't work
-    installdeps ExtUtils::MakeMaker ExtUtils::CBuilder Module::Build
+    installdeps ExtUtils::CBuilder Module::Build
   fi
 
 else
@@ -70,7 +70,6 @@ else
   # (e.g. once Carp is upgraded there's no more Carp::Heavy,
   # while a File::Path upgrade may cause a parallel EUMM run to fail)
   #
-  parallel_installdeps_notest ExtUtils::MakeMaker
   parallel_installdeps_notest File::Path
   parallel_installdeps_notest Carp
   parallel_installdeps_notest Module::Build
