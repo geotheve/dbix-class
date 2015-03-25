@@ -114,7 +114,7 @@ if [[ "$CLEANTEST" = "true" ]]; then
       # this is a fucked CPAN - won't understand configure_requires of
       # various pieces we may run into
       # FIXME - need to get these off metacpan or something instead
-      HARD_DEPS="ExtUtils::Depends B::Hooks::OP::Check $HARD_DEPS"
+      #HARD_DEPS="ExtUtils::Depends B::Hooks::OP::Check $HARD_DEPS"
 
       if CPAN_supports_BUILDPL ; then
         # We will invoke a posibly MBT based BUILD-file, but we do not support
