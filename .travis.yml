@@ -37,6 +37,8 @@
 # Additionally master does not smoke with bleadperl
 # ( implemented in maint/travis-ci_scripts/10_before_install.bash )
 #
+sudo: true
+
 branches:
   except:
     - /^wip\//
